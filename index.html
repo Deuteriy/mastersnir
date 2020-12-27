@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Кодировка веб-страницы -->
+    <meta charset="utf-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/styles.css" >
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Таблица</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Таблица</a></li>
+      <li><a href="adding.html">Добавление</a></li>
+      <li><a href="deleting.html">Удаление</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">Опции
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Отчет PDF</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container margin">
+    <h2>Таблица</h2>
+    <p>Фильтр по параметрам:</p>  
+    <input class="form-control" id="myInput" type="text" placeholder="Search.."><br>           
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>№</th>
+                <th>ФИО</th>
+                <th>Пол</th>
+                <th>Дата рождения</th>
+                <th width="80">Рост</th>
+                <th width="80">Вес</th>
+                <th>Возрастная группа</th>
+                <th>Оценка роста</th>
+                <th>Оценка веса</th>
+                <th>Норма зубов</th>
+                <th>Половое развитие</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>1</td>
+                <td>101</td>
+                <td>Батанин Даниил Алексеевич</td>
+                <td>Мужской</td>
+                <td>13 мая 1999</td>
+                <td>185 см</td>
+                <td>65 кг</td>
+                <td>8</td>
+                <td>8</td>
+                <td>8</td>
+                <td>Вне возраста</td>
+                <td>Вне возраста</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>101</td>
+                <td>Батанин Даниил Алексеевич</td>
+                <td>Мужской</td>
+                <td>13 мая 1999</td>
+                <td>180 см</td>
+                <td>65 кг</td>
+                <td>8</td>
+                <td>8</td>
+                <td>8</td>
+                <td>Вне возраста</td>
+                <td>Вне возраста</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>102</td>
+                <td>Батанина Алина Сергеевна</td>
+                <td>Женский</td>
+                <td>10 октября 1998</td>
+                <td>160 см</td>
+                <td>50 кг</td>
+                <td>8</td>
+                <td>8</td>
+                <td>8</td>
+                <td>Вне возраста</td>
+                <td>Вне возраста</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+    <!-- Подключаем jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Подключаем Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+    </script>
+
+
+</body>
+</html>

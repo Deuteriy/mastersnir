@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Кодировка веб-страницы -->
+    <meta charset="utf-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/styles.css" >
+</head>
+<body>
+
+<!-- Меню -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Добавление</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Таблица</a></li>
+      <li class="active"><a href="adding.html">Добавление</a></li>
+      <li><a href="deleting.html">Удаление</a></li>
+		<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">Опции
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Отчет PDF</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!--Блок основной информации-->
+<div class="container margin">
+	<h3>Основная информация</h3><br>
+	<div class="row">
+		<div class="form-group col-md-4">
+			<label for="number">Номер:</label>
+			<input type="text" class="form-control" id="number">
+		</div>
+	</div>
+  	<div class="row">
+	    <div class="form-group col-md-4">
+			<label for="name">ФИО:</label>
+			<input type="text" class="form-control" id="name">
+			<label for="date">Дата рождения:</label>
+			<input type="date" class="form-control" id="date">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="growth">Рост:</label>
+			<input type="text" class="form-control" id="growth">
+			<label for="weight">Вес:</label>
+			<input type="text" class="form-control" id="weight">
+		</div>
+		<div class="form-group col-md-4">
+			<b>Пол:</b> 
+			<div class="radio">
+				<label><input type="radio" name="optradio" id="male">Мужской</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="optradio" id="female">Женский</label>
+			</div>
+		</div>
+	</div>
+
+
+<!--Остальные параметры-->
+	<div class="row">
+		<div class="form-group col-md-4">
+			<a href="#tooth-collapse" class="btn btn-info" data-toggle="collapse">Зубной раздел <br><i> от 5 до 12(10 для девочек) лет</i></a>
+			<div id="tooth-collapse" class="collapse">
+				<label for="tooth">Число зубов:</label>
+				<input type="text" class="form-control" id="tooth">
+			</div>
+		</div>
+		<div class="form-group col-md-4">
+			<a href="#sex1-collapse" class="btn btn-info" data-toggle="collapse">Половой раздел <br><i>для девочек от 10 до 15 лет</i></a>
+			<div id="sex1-collapse" class="collapse">
+
+				<b>Развитие молочной железы:</b> 
+				<div class="radio">
+					<label><input type="radio" name="female-ans1" id="female-ans1par1">Железы не выделяются над поверхностью грудной клетки</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans1" id="female-ans1par2">Железы несколько выдаются</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans1" id="female-ans1par3">Железы значительно выдаются</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans1" id="female-ans1par4">Тело железы принимает округлую форму</label>
+				</div>
+
+				<b>Оволосенение лобка:</b> 
+				<div class="radio">
+					<label><input type="radio" name="female-ans2" id="female-ans2par1">Отсутствие волос</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans2" id="female-ans2par2">Единичные волосы</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans2" id="female-ans2par3">Волосы на центральном участке лобка, редкие, длинные</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans2" id="female-ans2par4">Волосы на всем треугольнике лобка, длинные, вьющиеся, густые</label>
+				</div>
+
+				<b>Развитие волос в подмышечной впадине:</b> 
+				<div class="radio">
+					<label><input type="radio" name="female-ans3" id="female-ans3par1">Отсутствие волос</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans3" id="female-ans3par2">Единичные волосы</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans3" id="female-ans3par3">Волосы редкие на центральном участке впадины</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans3" id="female-ans3par4">Волосы густые, длинные, вьющиеся по всей впадине</label>
+				</div>
+
+				<b>Становление менструальной функции:</b> 
+				<div class="radio">
+					<label><input type="radio" name="female-ans4" id="female-ans4par1">Отсутствие менструаций</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans4" id="female-ans4par2">Менархе в момент осмотра</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans4" id="female-ans4par3">Нерегулярные менструации</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="female-ans4" id="female-ans4par4">Регулярные менструации в течение года</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-md-4">
+			<a href="#sex2-collapse" class="btn btn-info" data-toggle="collapse">Половой раздел <br><i>для мальчиков от 12 до 17 лет</i></a>
+			<div id="sex2-collapse" class="collapse">
+				<b>Оволосение подмышечных впадин:</b> 
+				<div class="radio">
+					<label><input type="radio" name="male-ans1" id="male-ans1par1">Отсутствие волос</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans1" id="male-ans1par2">Единичные волосы</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans1" id="male-ans1par3">Редкие волосы на центральном участке впадины</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans1" id="male-ans1par4">Густые прямые волосы по всей впадине</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans1" id="male-ans1par5">Густые вьющиеся волосы по всей впадине</label>
+				</div>
+
+				<b>Оволосение лобка:</b> 
+				<div class="radio">
+					<label><input type="radio" name="male-ans2" id="male-ans2par1">Отсутствие волос</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans2" id="male-ans2par2">Единичные волосы</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans2" id="male-ans2par3">Редкие волосы в центре лобка</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans2" id="male-ans2par4">Густые прямые волосы неравномерно по всей поверхности лобка</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans2" id="male-ans2par5">Густые вьющиеся волосы равномерно по всей поверхности лобка в виде треугольника</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans2" id="male-ans2par6">Густые вьющиеся волосы, распространяющиеся на внутреннюю поверхность бедер в направлении к пупку</label>
+				</div>
+
+				<b>Рост щитовидного хряща:</b> 
+				<div class="radio">
+					<label><input type="radio" name="male-ans3" id="male-ans3par1">Отсутствие признаков роста</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans3" id="male-ans3par2">Начинающееся выпячивание щитовидного хряща гортани</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans3" id="male-ans3par3">Отчетливое выпячивание</label>
+				</div>
+
+				<b>Изменение тембра голоса:</b> 
+				<div class="radio">
+					<label><input type="radio" name="male-ans4" id="male-ans4par1">Детский голос</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans4" id="male-ans4par2">Мутация (ломка) голоса</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans4" id="male-ans4par3">Мужской тембр голоса</label>
+				</div>
+
+				<b>Оволосение лица:</b> 
+				<div class="radio">
+					<label><input type="radio" name="male-ans5" id="male-ans5par1">Отсутствие оволосения</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans5" id="male-ans5par2">Начинающиеся оволосения</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans5" id="male-ans5par3">Жесткие волосы над верхней губой, появление волос на подбородке</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans5" id="male-ans5par4">Распространенное оволосение над верхней губой и в области подбородка, начало роста бакенбардов</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans5" id="male-ans5par5">Слияние зон роста волос над губой и в области подбородка, выраженный рост бакенбардов</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="male-ans5" id="male-ans5par6">Слияние всех зон оволосения</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-4"></div>
+		<div class="form-group col-md-4">
+			<button type="button" class="btn btn-success">Добавить</button>
+		</div>
+</div>
+
+
+<!-- <div class="container">
+	<div class="row">
+		<div class="form-group col-md-4">
+			<a href="#sex1-collapse" class="btn btn-info" data-toggle="collapse">Половой раздел <br><i>для девочек от 10 до 15 лет</i></a>
+			<div id="sex1-collapse" class="collapse">
+				<b>Развитие молочной железы:</b> 
+				<div class="radio">
+					<label><input type="radio" name="ans1" id="female-ans1par1">Железы не выделяются над поверхностью грудной клетки</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="ans1" id="female-ans1par2">Железы несколько выдаются</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="ans1" id="female-ans1par3">Железы значительно выдаются</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="ans1" id="female-ans1par4">Тело железы принимает округлую форму</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Подключаем jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Подключаем Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
